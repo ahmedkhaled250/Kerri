@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+:root {
+  --main-color: #e65f78;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Nunito Sans", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+.navbar-nav .nav-link.active {
+  color: var(--main-color);
+}
+.navbar-nav .nav-link {
+  transition: 0.3s;
+  font-weight: bold;
+}
+.navbar-nav .nav-link:hover {
+  color: var(--main-color);
+}
+#home {
+  background-image: url(../images/header-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.download-cv {
+  all: unset;
+  display: block;
+  width: fit-content;
+  margin: auto;
+  border: 2px solid #fff;
+  padding: 10px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.download-cv:hover {
+  background-color: #fff;
+  color: black;
+}
+.down-icon {
+  all: unset;
+  display: block;
+  width: 30px;
+  height: 50px;
+  border: #fff solid 2px;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50px;
+  cursor: pointer;
+}
+.down-icon::after {
+  content: "";
+  width: 4px;
+  height: 8px;
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: down 1s linear infinite;
+}
+@keyframes down {
+  0% {
+    bottom: 10px;
+  }
+  50% {
+    bottom: 30px;
+  }
+  100% {
+    bottom: 10px;
+  }
+}
+.setting {
+  top: 30%;
+}
+.up-home {
+  right: 30px;
+  bottom: 30px;
+  background-color: var(--main-color);
+}
+.social a {
+  height: 40px;
+  width: 40px;
+  color: #333;
+  text-decoration: none;
+  border: solid #333 2px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+#about .social a:hover {
+  color: var(--main-color);
+  border: solid var(--main-color) 2px;
+}
+footer .social a {
+  height: 40px;
+  width: 40px;
+  color: #666;
+  text-decoration: none;
+  border: none;
+  background-color: #333;
+  border-radius: 50%;
+
+  transition: 0.3s;
+}
+footer .social a:hover {
+  color: var(--main-color);
+}
+.main-color {
+  color: var(--main-color);
+}
+#testimonial .carousel-indicators [data-bs-target] {
+  all: unset;
+  width: 15px;
+  height: 5px;
+  background-color: var(--main-color);
+  margin: 15px 3px 0px;
+  cursor: pointer;
+  opacity: 0.7;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+#testimonial .carousel-indicators .active {
+  opacity: 1;
+  width: 25px;
+}
+
+#testimonial .carousel-item i,
+#testimonial .carousel-item img,
+#testimonial .carousel-item p,
+#testimonial .carousel-item span {
+  transform: scale(0);
+}
+#testimonial .carousel-item i {
+  transition: all 0.2s;
+}
+#testimonial .carousel-item img {
+  transition: all 0.4s;
+}
+#testimonial .carousel-item p {
+  transition: all 0.7s;
+}
+#testimonial .carousel-item span {
+  transition: all 1s;
+}
+#testimonial .carousel-item.active i,
+#testimonial .carousel-item.active img,
+#testimonial .carousel-item.active p,
+#testimonial .carousel-item.active span {
+  transform: scale(1);
+}
+#portfolio .nav-link.active {
+  color: #fff !important;
+  background-color: var(--main-color);
+  border-radius: 50px;
+}
+#portfolio .tab-pane .main-work img {
+  transition: 0.5s;
+}
+#portfolio .tab-pane .main-work .layer {
+  transition: 0.5s;
+}
+#portfolio .tab-pane .main-work:hover .layer {
+  opacity: 1 !important;
+}
+#portfolio .tab-pane .main-work:hover img {
+  transform: scale(1.2);
+}
+#contact button {
+  background-color: var(--main-color);
+  transition: 0.3s;
+}
+#contact button:hover {
+  background-color: #e45656;
+}
+input:focus,
+textarea:focus {
+  border: 1px solid var(--main-color) !important;
+  box-shadow: none !important;
+}
